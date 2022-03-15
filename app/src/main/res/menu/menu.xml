@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--THREE DOT MENU-->
+
+<!--    <item android:title="@string/favorite"
+        android:id="@+id/menuFavorite"
+        android:icon="@drawable/icon_star"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="@string/info"
+        android:id="@+id/menuInfo"
+        android:icon="@drawable/icon_info"
+        app:showAsAction="always"/>-->
+
+    <item android:title="@string/item1"
+    android:id="@+id/item1"
+    app:showAsAction="never"/>
+
+    <item android:title="@string/item2"
+    android:id="@+id/item2"
+    app:showAsAction="never"/>
+
+    <item android:title="@string/item3"
+        android:id="@+id/item3"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/item4"
+        android:id="@+id/item4"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/item5"
+        android:id="@+id/item5"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/item6"
+        android:id="@+id/item6"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/item7"
+        android:id="@+id/item7"
+        app:showAsAction="never"/>
+</menu>

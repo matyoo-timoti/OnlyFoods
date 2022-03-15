@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">OnlyFoods</string>
+    <string name="view_previous_image">View Previous Image</string>
+    <string name="view_next_image">View Next Image</string>
+    <string name="itemName">Item Name</string>
+    <string name="txtAppTitle">OnlyFoods</string>
+    <string name="btnViewGallery">View Gallery</string>
+    <string name="btnViewMore">View More</string>
+    <string name="txtSubtitle">GET EVEN MORE HUNGRY</string>
+    <string name="item1">Afritada</string>
+    <string name="item2">Menudo</string>
+    <string name="item3">Caldereta</string>
+    <string name="item4">Mechado</string>
+    <string name="item5">Pochero</string>
+    <string name="item6">Adobo</string>
+    <string name="item7">Sisig</string>
+</resources>
