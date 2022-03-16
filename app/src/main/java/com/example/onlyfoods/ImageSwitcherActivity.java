@@ -88,7 +88,6 @@ public class ImageSwitcherActivity extends AppCompatActivity {
                 currentIndex = 0;
             imageSwitcher.setImageResource(imageList[currentIndex]);
             txtItemName.setText(itemNames[currentIndex]);
-
         });
     }
 

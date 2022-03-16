@@ -164,6 +164,7 @@ public class WebViewActivity extends AppCompatActivity {
 
             //---back button on title bar
             case (android.R.id.home):
+                toast("Exit WebView");
                 finish();
                 break;
             default:

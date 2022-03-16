@@ -92,10 +92,9 @@ public class GridViewActivity extends AppCompatActivity {
 
     private void viewImage(int pos, String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(GridViewActivity.this, ImageSwitcherActivity.class);
+        Intent intent = new Intent(this, ImageSwitcherActivity.class);
         intent.putExtra("currentIndex", pos);
         startActivity(intent);
-        finish();
     }
 
     //---image adapter---

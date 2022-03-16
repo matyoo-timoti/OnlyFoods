@@ -13,13 +13,16 @@
         android:theme="@style/Theme.OnlyFoods">
         <activity
             android:name=".WebViewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleInstance"/>
         <activity
             android:name=".ImageSwitcherActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleInstance"/>
         <activity
             android:name=".GridViewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="standard"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
