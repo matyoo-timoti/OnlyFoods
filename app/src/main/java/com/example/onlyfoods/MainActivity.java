@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnGallery = findViewById(R.id.btnViewGallery);
         btnGallery.setOnClickListener(view -> openGalleryActivity());
 
+        //View Web View
         Button btnViewMore = findViewById(R.id.btnViewMore);
         btnViewMore.setOnClickListener(view -> openViewMoreActivity());
     }

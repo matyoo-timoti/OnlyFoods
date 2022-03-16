@@ -95,12 +95,7 @@ public class ImageSwitcherActivity extends AppCompatActivity {
     //---Back button on action bar---
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if ( id == android.R.id.home ) {
-            finish();
-            return true;
-        }
-        startActivity(new Intent(ImageSwitcherActivity.this,GridViewActivity.class));
+        finish();
         return super.onOptionsItemSelected(item);
     }
 }

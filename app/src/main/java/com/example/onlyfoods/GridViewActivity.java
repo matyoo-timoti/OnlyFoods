@@ -27,21 +27,22 @@ public class GridViewActivity extends AppCompatActivity {
             R.drawable.pic6,
             R.drawable.pic7,
     };
-    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Gallery");
         setContentView(R.layout.activity_grid_view);
+
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         GridView gridView = findViewById(R.id.gridView);
         gridView.setAdapter(new ImageAdapter(this));
+
         gridView.setOnItemClickListener((adapterView, view, position, id) -> {
-            intent = new Intent(GridViewActivity.this, ImageSwitcherActivity.class);
+            Intent intent = new Intent(GridViewActivity.this, ImageSwitcherActivity.class);
             intent.putExtra("currentIndex", position);
             startActivity(intent);
         });
@@ -58,40 +59,43 @@ public class GridViewActivity extends AppCompatActivity {
     //---menu bar buttons---
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        startActivity(new Intent(GridViewActivity.this, MainActivity.class));
-
         int id = item.getItemId();
-        int pos = 0;
-
         //---menu item click handling---
         switch (id) {
             case (R.id.item1):
-                pos = 0;
+                viewImage(0, (String) item.getTitle());
                 break;
             case (R.id.item2):
-                pos = 1;
+                viewImage(1, (String) item.getTitle());
                 break;
             case (R.id.item3):
-                pos = 2;
+                viewImage(2, (String) item.getTitle());
                 break;
             case (R.id.item4):
-                pos = 3;
+                viewImage(3, (String) item.getTitle());
                 break;
             case (R.id.item5):
-                pos = 4;
+                viewImage(4, (String) item.getTitle());
                 break;
             case (R.id.item6):
-                pos = 5;
+                viewImage(5, (String) item.getTitle());
                 break;
             case (R.id.item7):
-                pos = 6;
+                viewImage(6, (String) item.getTitle());
+                break;
+            case (android.R.id.home):
+                finish();
                 break;
         }
-        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
-        intent = new Intent(GridViewActivity.this, ImageSwitcherActivity.class);
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void viewImage(int pos, String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(GridViewActivity.this, ImageSwitcherActivity.class);
         intent.putExtra("currentIndex", pos);
         startActivity(intent);
-        return super.onOptionsItemSelected(item);
+        finish();
     }
 
     //---image adapter---
@@ -127,8 +131,7 @@ public class GridViewActivity extends AppCompatActivity {
             ImageView imageView;
             if (convertView == null) {
                 imageView = new ImageView(context);
-                imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
-
+                imageView.setLayoutParams(new GridView.LayoutParams(200, 220));
                 //---match fit image to column width---
                 imageView.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
                 imageView.setScaleType(
@@ -140,6 +143,5 @@ public class GridViewActivity extends AppCompatActivity {
             imageView.setImageResource(imageIDs[position]);
             return imageView;
         }
-
     }
 }

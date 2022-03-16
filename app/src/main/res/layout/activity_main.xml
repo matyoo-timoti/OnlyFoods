@@ -50,7 +50,7 @@
         android:layout_marginBottom="108dp"
         android:height="70dp"
         android:backgroundTint="#FFFFFF"
-        android:text="@string/btnViewMore"
+        android:text="@string/view_random"
         android:textColor="#000000"
         android:textSize="16sp"
         app:cornerRadius="50dp"
