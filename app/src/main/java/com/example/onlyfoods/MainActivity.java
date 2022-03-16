@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openViewMoreActivity() {
-//        Intent intent = new Intent(this, WebViewActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, WebViewActivity.class);
+        startActivity(intent);
     }
 }
